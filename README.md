@@ -19,7 +19,7 @@ A machine learning project to estimate property prices in Buenos Aires using rea
   - surface_covered, surface_total  
   - lat, lon, l3 (neighborhood), property_type  
 
-**Please download the data or use the link provided in the source if you want to create the files in the data folder yourself** 
+**Please download the data or use the link provided in the source if you want to create the files in the data folder yourself.** 
 
 ## 🧠 ML Pipeline
 
@@ -93,3 +93,9 @@ Developed by a data science enthusiast exploring the intersection of machine lea
 ## 📜 License
 
 This project is for educational purposes only. Do not use for real estate decision-making without verifying predictions independently.
+
+![Screenshot](https://img.shields.io/badge/Screenshot-Streamlit_App-blue?logo=streamlit)
+
+<img src='Streamlit_app_tab1.png' alt='Screenshot of Tab1 from the built Streamlit APP'>
+
+<img src='Streamlit_app_tab2.png' alt='Screenshot of Tab2 from the built Streamlit APP'>
