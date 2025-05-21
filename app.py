@@ -132,14 +132,14 @@ with tab2:
     st.plotly_chart(fig2, use_container_width=True)
 
     # --- Feature Importances (if available) ---
-    st.subheader("🔍 Feature Importances")
+    st.subheader("🔍 Ten Most Important Features")
     model = pipeline.named_steps["model"]
     if hasattr(model, "feature_importances_"):
         importances = model.feature_importances_
         fi_df = pd.DataFrame({
             "Feature": pipeline.named_steps.preprocessor.get_feature_names_out(),
             "Importance": importances
-        }).sort_values(by="Importance", ascending=True)
+        }).sort_values(by="Importance", ascending=True).tail(10)
 
         fig3 = px.bar(fi_df, x="Importance", y="Feature", orientation='h', title="Feature Importance")
         st.plotly_chart(fig3, use_container_width=True)
