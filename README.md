@@ -11,6 +11,27 @@ A machine learning project to estimate property prices in Buenos Aires using rea
 - Interactive Streamlit UI with input form, evaluation dashboard, and map  
 - Predictive model for estimating home prices based on features like location, size, and type  
 
+## 🔧 Setup Instructions
+### Option 1: Using pip
+
+```bash
+pip install -r requirements.txt
+```
+### Option 2: Using Conda
+```bash
+conda env create -f environment.yml
+conda activate ba-price-predictor
+```
+### **NOTE**
+
+**The model pkl file is too large to be uploaded into this repo. To get the model, you can train the model and place in the model directory. The model paramaters can be found in the Jupyter Notebook**
+
+**Or you can run the following bash script in the terminal of your virtual environment at the project directory to automate the task for you**
+```bash
+python model.py
+```
+
+
 ## 📁 Dataset
 
 - **Source:** [Kaggle – BSAS Real Estate on Sale](https://www.kaggle.com/datasets/alejandromendivil/bsas-realstate-on-sale/data)
@@ -25,13 +46,15 @@ A machine learning project to estimate property prices in Buenos Aires using rea
 
 The model pipeline was built using Scikit-learn and includes:
 
-python
+```python
 Pipeline([
     ("preprocessor", ColumnTransformer([...], remainder="drop")),
     ("model", RandomForestRegressor())
 ])
+```
 
-**Please train the model and place in the model directory, the file is too large to be uploaded into this repo. The model paramaters can be found in the Jupyter Notebook**
+
+
 
 ## Key Components
   * One-hot encoding for categorical variables
@@ -45,8 +68,9 @@ Pipeline([
 ## 🚀 Streamlit App
 
 To launch the app locally, run:
-
+```bash
 streamlit run app.py
+```
 
 ### Tabs
 
@@ -86,7 +110,7 @@ streamlit run app.py
 
 Developed by a data science enthusiast exploring the intersection of machine learning, user experience, and location intelligence.
 
-  * 📫 Feel free to connect on LinkedIn or GitHub
+  *  📫 Feel free to connect on [LinkedIn](https://www.linkedin.com/in/shahriar-islam-75567a160/) or [GitHub](https://github.com/Shahriar-77)
 
   * 🎓 Built as part of a growing AI portfolio
 
@@ -94,8 +118,14 @@ Developed by a data science enthusiast exploring the intersection of machine lea
 
 This project is for educational purposes only. Do not use for real estate decision-making without verifying predictions independently.
 
-![Screenshot](https://img.shields.io/badge/Screenshot-Streamlit_App-blue?logo=streamlit)
+## 🖼️ Screenshots
 
-<img src='Streamlit_app_tab1.png' alt='Screenshot of Tab1 from the built Streamlit APP'>
+Below are snapshots of the Streamlit web application in action.
 
-<img src='Streamlit_app_tab2.png' alt='Screenshot of Tab2 from the built Streamlit APP'>
+![Screenshot Tab 1](Streamlit_app_tab1.png)
+
+*Prediction tab: Enter property details and view the estimated price.*
+
+![Screenshot Tab 2](Streamlit_app_tab2.png)
+
+*Evaluation tab: Model performance metrics, actual vs predicted plot, and feature importances.*
